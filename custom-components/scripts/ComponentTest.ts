@@ -2,7 +2,6 @@ import { ItemComponentConsumeEvent, ItemCustomComponent } from "@minecraft/serve
 
 export class CauseHungerOnConsumeComponent implements ItemCustomComponent {
   onConsume(arg: ItemComponentConsumeEvent) {
-    arg.source.addEffect("minecraft:hunger", 600);
-    arg.source.applyDamage(0.5);
+    arg.source.playSound("record.pigstep"); 
   }
 }
