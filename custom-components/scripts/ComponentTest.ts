@@ -1,7 +1,7 @@
-import { ItemComponentConsumeEvent, ItemCustomComponent } from "@minecraft/server";
+import { ItemComponentUseOnEvent, ItemCustomComponent } from "@minecraft/server";
 
 export class CauseHungerOnConsumeComponent implements ItemCustomComponent {
-  onConsume(arg: ItemComponentConsumeEvent) {
+  onUse(arg: ItemComponentUseOnEvent) {
     arg.source.playSound("record.pigstep"); 
   }
 }
